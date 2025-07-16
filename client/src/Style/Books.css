@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #FFD700;
+  --accent-color: #f5b642;
+  --dark-bg: #1f1c2c;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-color: #ffffff;
+}
+
+/* ==== Page Wrapper ==== */
+.books-page {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #1f1c2c, #41295a, #2F0743, #928DAB);
+  background-size: 400% 400%;
+  animation: aiGradient 12s ease infinite;
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+@keyframes aiGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ==== Category Filters ==== */
+.category-filters {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  animation: fadeSlideDown 1s ease;
+}
+
+.category-filters button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--glass-bg);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(6px);
+}
+
+.category-filters button:hover,
+.category-filters .active {
+  background-color: var(--accent-color);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ==== Book List Grid ==== */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* center items */
+  gap: 5rem;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeSlideDown 1.2s ease;
+}
+
+
+
+/* ==== Book Card ==== */
+.book-card {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 12px var(--glass-border);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 30rem;
+  color: var(--text-color);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30rem !important;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ==== Book Image ==== */
+.book-card img {
+  width: 100%;
+  height: 200px;
+  padding: 0 !important;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ==== Book Text Info ==== */
+.book-card .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0 4px;
+}
+
+.book-card .author {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.book-card .price {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: var(--accent-color);
+}
+
+/* ==== Button ==== */
+.book-card button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.book-card button:hover {
+  background-color: #e89f00;
+  transform: scale(1.03);
+}
+
+/* ==== Animation Keyframe ==== */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .book-card {
+    height: auto;
+  }
+
+  .category-filters {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+}

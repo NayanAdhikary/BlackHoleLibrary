@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #FFD700;
+  --bg-dark: #1f1c2c;
+  --glass-bg: rgba(0, 0, 0, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: rgba(255, 255, 255, 0.05);
+  --text-color: #ffffff;
+}
+
+/* === Animated Gradient Background === */
+.admin-rented-container {
+  padding: 2rem;
+  min-height: 90vh;
+  background: linear-gradient(-45deg, #1f1c2c, #928DAB, #2F0743, #41295a);
+  background-size: 400% 400%;
+  animation: aiGradient 15s ease infinite;
+  color: var(--text-color);
+  overflow-x: hidden;
+  animation: fadeSlideDown 1s ease;
+}
+
+@keyframes aiGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Top-down animation === */
+@keyframes fadeSlideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* === Title === */
+.admin-rented-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: fadeSlideDown 1s ease 0.2s forwards;
+  opacity: 0;
+}
+
+/* === Error Message === */
+.admin-rented-error {
+  color: #ff6b6b;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: fadeSlideDown 1s ease 0.4s forwards;
+  opacity: 0;
+}
+
+/* === Table Wrapper === */
+.admin-rented-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 12px var(--glass-shadow);
+  padding: 0.5rem;
+  animation: fadeSlideDown 1s ease 0.6s forwards;
+  opacity: 0;
+}
+
+/* === Table === */
+.admin-rented-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  color: var(--text-color);
+  background-color: transparent;
+  animation: fadeSlideDown 1s ease 0.8s forwards;
+  opacity: 0;
+}
+
+.admin-rented-table th,
+.admin-rented-table td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.admin-rented-table th {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* === Book Image === */
+.rented-book-img {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  animation: fadeSlideDown 1s ease 1s forwards;
+  opacity: 0;
+}
+
+.rented-book-img:hover {
+  transform: scale(1.1);
+}

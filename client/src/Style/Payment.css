@@ -1,0 +1,63 @@
+.payment-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.payment-card {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.payment-card img {
+  width: 15rem;
+  height: 20rem;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.payment-info input {
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1.5px solid rgb(57, 57, 57);
+  border-radius: 5px;
+  background-color: #1c1c1e;
+}
+
+input::placeholder{
+  color: white;
+}
+
+.payment-info button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5b642;
+  border: none;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-info button:hover {
+  background-color: #e89f00;
+}
+
+.payment-msg {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}

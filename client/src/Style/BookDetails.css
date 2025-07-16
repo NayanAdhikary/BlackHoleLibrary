@@ -1,0 +1,30 @@
+.book-details-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 60rem;
+    margin: 20px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 35px;
+}
+
+.card img{
+    width: 20rem;
+    height: 30rem;
+    border-radius: 25px;
+    margin: 2rem 0;
+    padding: 10px;
+}
+
+.info{
+    margin: 6rem 0;
+    width: 25rem;
+    padding: 20px;
+    /* text-align: center; */
+    border-radius: 20px;
+}

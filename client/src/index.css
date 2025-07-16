@@ -1,0 +1,250 @@
+:root {
+  --text-color: #ffffff;
+  --bg-color: #1c1c1e;
+  --accent-color: #f0b429;
+  --accent-hover: #d19c27;
+
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Admin Common Style ---------- */
+:root {
+  --gold: #FFD700;
+  --bg-dark: #1f1c2c;
+  --bg-light: #928DAB;
+  --bg-purple: #2F0743;
+  --bg-pink: #41295a;
+  --glass-dark: rgba(0, 0, 0, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-color: #fff;
+}
+
+body {
+  background: linear-gradient(-45deg, var(--bg-dark), var(--bg-light), var(--bg-purple), var(--bg-pink));
+  background-size: 400% 400%;
+  animation: aiGradient 12s ease infinite;
+  color: var(--text-color);
+}
+
+@keyframes aiGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Admin Dashboard ---------- */
+.admin-dashboard-container {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.admin-dashboard-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.admin-card {
+  background-color: var(--glass-dark);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+}
+
+.admin-card h3 {
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Charts ---------- */
+.dashboard-charts {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.chart-box {
+  background-color: var(--glass-dark);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.chart-title {
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  /* padding: 3rem 1rem 1rem; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Prevent margin collapse at the top */
+body > *:first-child {
+  margin-top: 0;
+}
+
+/* Optional: consistent section spacing */
+section {
+  margin-bottom: 2rem;
+}
+
+.bd {
+  padding: 2px;
+  width: 0.5px;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  border: none;
+  color: var(--text-color);
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border-radius: 6px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e2e30;
+  color: var(--text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  font-size: 1rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* Light Mode Support */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #2c3e50;
+    --bg-color: #ffffff;
+    --accent-color: #f0b429;
+    --accent-hover: #d19c27;
+  }
+}
+
+/* Apply to entire page */
+body {
+  scrollbar-width: thin;                  /* Firefox */
+  scrollbar-color: #5c5c5c #1e1e1e;       /* Firefox */
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;                    /* Track background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5c5c5c;              /* Solid thumb color */
+  border-radius: 10px;
+  border: 2px solid #1e1e1e;              /* Creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7a7a7a;              /* Slightly lighter on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: #1e1e1e;
+}
